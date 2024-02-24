@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,#0B1623,#4B0082);
+}
+
+header h1{
+    color:#fff ;
+    margin:5rem 0;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header,
+form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+form{
+    position: relative;
+}
+
+form .search{
+    display: flex;
+}
+
+form button,
+form input{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color:#fff ;
+    outline: none;
+}
+
+form button {
+    color: #fff;
+    background-color:#190B14;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color:#fff;
+    color: #190B14;
+}
+
+.select{
+    position: relative;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width: 10rem;
+    padding: 1rem;
+    cursor: pointer;
+    color:#190B14 ;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background-color: #190B14;
+    color: #fff;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: none;
+
+}
+
+
+.select:hover:after{
+    background-color: #fff;
+    color: #190B14;
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style-type: none;
+}
+
+.todo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    width: 25rem;
+    transition: .5s all ease;
+}
+
+.todo li{
+    width: 100%;
+    padding: 0 0.5rem;
+    
+ } 
+
+
+.complete-btn,
+.trash-btn{
+    background-color: #972323;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background-color: #0b8793;
+}
+
+.fa-check-circle,
+.fa-minus-circle{
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+/*alert css*/
+
+.alert-wrapper{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+}
+
+.alert-success,
+.alert-warning{
+    padding: 1rem;
+    color: #fff;
+    font-weight: bold;
+    width: 25rem;
+    text-align: center;
+    display: none;
+}
+
+.alert-warning{
+    background-color: #dc3545;
+}
+
+.alert-success{
+    background-color: #0b8793;
+}
+
+
+.fall{
+    transform: translateY(8rem) rotateZ(180deg);
+    opacity: 0;
+}
+
+.completed{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
